@@ -1,24 +1,113 @@
 <!DOCTYPE html lang="en">
 <style>
+    body {
+        font-family: arial,sans-serif;
+    }
     #google-logo {
-        position: relative;
-        margin-top: 11em;
-        margin-left: 31em;
-        background-color: white;
+        background-color: transparent;
+        display: block;
+        margin-top: 175px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+    #searchbar {
+        display: block;
+        width: 32%;
+        height: 48px;
+        margin: auto;
+        padding-top: 22px;
+        border: solid grey 2px;
+        border-radius: 25px;
+        font-size: 34;
+    }
+    .buttons {
+        text-align: center;
+        padding: 20px;
+    }
+    #search {
+        display: inline-block;
+        border-radius: 4px;
+        background: #f2f2f2;
+        border: 0px solid whitesmoke;
+        padding: 13px;
+        color: #5F6368;
+    }
+    #feeling-lucky {
+        display: inline-block;
+        border-radius: 4px;
+        background: #f2f2f2;
+        border: 0px solid whitesmoke;
+        padding: 13px;
+        color: #5F6368;
+    }
+    .navbar {
+        color: rgba(0, 0, 0, 0.87);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    il a {
+        color: black;
+        padding: 15px;
+        font-size: 13px;
+        text-decoration: none;
+    }
+    .left {
+        color:rgba(0, 0, 0, 0.87);
+    }
+    .right {
+        float: right;
+    }
+    #pfp {
+        border-radius: 50%;
+    }
+    #menu {
+        border-radius: 3%;
+    }
+    #footer {
+        background-color: grey;
+        width: 100%;
+        color: #222;
+    }
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 </style>
 <html lang="eng"> 
 <head>
         <title>Google Homepage</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
     <body>
-        <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
-        
-
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+        <ul class="navbar">
+            <il class="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiBytGdwvDqAhUCXawKHSsxAkQQkNQCCAM&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-US%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw13L0SpN0L7ycx9R0_i4R2S">About</a></il>
+            <il class="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiBytGdwvDqAhUCXawKHSsxAkQQpMwCCAQ&url=https%3A%2F%2Fstore.google.com%2FUS%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-US&usg=AOvVaw0wvkRBURf91YdMQCXOelDf">Store</a></il>
+            <il class="right"><a href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/"><img  id="pfp" src="https://lh3.googleusercontent.com/ogw/ADGmqu8mBYuTvelhAnW5HuwU1hDx6HYP9MFDbnfAow45=s32-c-mo" alt="profile picture"></a></il>
+            <il id="menu" class="right"><a href="https://www.google.com/intl/en/about/products?tab=wh"><img src="google-app-menu.jpg" height="19" width="auto" alt="google app menu"></a></il>
+            <il class="right"><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></il>
+            <il class="right"><a href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a></il>
+        </ul>
+        <div>
+            <img  id="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
+        </div>
+        <form>
+            <input id="searchbar" type="text">
+            <div class="buttons">
+                <button id="search" type="submit">Google Search</button>
+                <button id="feeling-lucky" type="submit">I'm Feeling Lucky</button>
+            </div>
+        </form>
+        <footer class="bottom" id="footer">
+            <ul>
+                <il class="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQkdQCCBU&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_us%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw3XLzhicA5ZZW0afDbW0l2T">Advertising</a></il>
+                <il class="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQktQCCBY&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">Business</a></il>
+                <il class="left"><a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a></il>
+                <il class="right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQzq0CCBM&url=https%3A%2F%2Fwww.google.com%2Fpreferences%3Fhl%3Den&usg=AOvVaw0XvhSqpc_GFt9aG_mRLp1F">Settings</a></il>
+                <il class="right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQ8qwCCBI&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Den%26fg%3D1&usg=AOvVaw2d8Ahs2oc0jxVOgPfpr4Fe">Terms</a></il>
+                <il class="right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQ8awCCBE&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Den%26fg%3D1&usg=AOvVaw25lN6TjyY2uszSImdhMejE">Privacy</a></il>
+            </ul>
+        </footer>
     </body>
-    
-</html>   
+</html>
