@@ -12,14 +12,33 @@
         padding-bottom: 30px;
     }
     #searchbar {
-        display: block;
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
         width: 32%;
-        height: 48px;
+        height: 45px;
         margin: auto;
-        padding-top: 22px;
-        border: solid grey 2px;
+        border: solid lightgrey 1px;
         border-radius: 25px;
-        font-size: 34;
+        font: 16px arial,sans-serif;
+    }
+    #search-icon {
+        display: inline-block;
+        height: 15px;
+        width: auto;
+        margin-top: 15px;
+        margin-left: 10px;
+        
+    }
+    #searchbar-text {
+        display: inline-block;
+        width: 92%;
+        height: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        border: solid grey 0px;
+        outline: none;
     }
     .buttons {
         text-align: center;
@@ -32,6 +51,7 @@
         border: 0px solid whitesmoke;
         padding: 13px;
         color: #5F6368;
+        outline: none;
     }
     #feeling-lucky {
         display: inline-block;
@@ -40,24 +60,31 @@
         border: 0px solid whitesmoke;
         padding: 13px;
         color: #5F6368;
+        outline: none;
     }
     .navbar {
+        position: relative;
         color: rgba(0, 0, 0, 0.87);
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
     }
-    il a {
-        color: black;
-        padding: 15px;
+    .nav-elements {
+        margin: 5px;
         font-size: 13px;
         text-decoration: none;
-    }
-    .left {
+        font-family: arial,sans-serif;
         color:rgba(0, 0, 0, 0.87);
     }
+    .left {
+        display: flex;
+        align-items: center;
+    }
     .right {
-        float: right;
+        display: flex;
+        align-items: center;
     }
     #pfp {
         border-radius: 50%;
@@ -66,14 +93,35 @@
         border-radius: 3%;
     }
     #footer {
-        background-color: grey;
+        background-color: rgb(242, 242, 242);
         width: 100%;
-        color: #222;
+        height: 40px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-element {
+        display: inline-block;
+        margin: 0px 12px;
+    }
+    .link {
+       margin: 0px;
+       text-decoration: none;
+       color: rgb(95, 99, 104);
+    }
+    #footer-left {
+        display: inline-block;
+        margin-left: 0px;
+    }
+    #footer-right { 
+        display: inline-block;
+        margin-right: 20px;
     }
     .bottom {
         position: absolute;
         bottom: 0;
         left: 0;
+        right: 0;
     }
 </style>
 <html lang="eng"> 
@@ -82,31 +130,40 @@
 </head>
     <body>
         <ul class="navbar">
-            <il class="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiBytGdwvDqAhUCXawKHSsxAkQQkNQCCAM&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-US%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw13L0SpN0L7ycx9R0_i4R2S">About</a></il>
-            <il class="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiBytGdwvDqAhUCXawKHSsxAkQQpMwCCAQ&url=https%3A%2F%2Fstore.google.com%2FUS%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-US&usg=AOvVaw0wvkRBURf91YdMQCXOelDf">Store</a></il>
-            <il class="right"><a href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/"><img  id="pfp" src="https://lh3.googleusercontent.com/ogw/ADGmqu8mBYuTvelhAnW5HuwU1hDx6HYP9MFDbnfAow45=s32-c-mo" alt="profile picture"></a></il>
-            <il id="menu" class="right"><a href="https://www.google.com/intl/en/about/products?tab=wh"><img src="google-app-menu.jpg" height="19" width="auto" alt="google app menu"></a></il>
-            <il class="right"><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></il>
-            <il class="right"><a href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a></il>
+            <div class="left">
+                <il class="nav-elements"><a class="nav-elements" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiBytGdwvDqAhUCXawKHSsxAkQQkNQCCAM&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-US%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw13L0SpN0L7ycx9R0_i4R2S">About</a></il>
+                <il class="nav-elements"><a class="nav-elements" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiBytGdwvDqAhUCXawKHSsxAkQQpMwCCAQ&url=https%3A%2F%2Fstore.google.com%2FUS%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-US&usg=AOvVaw0wvkRBURf91YdMQCXOelDf">Store</a></il>
+            </div>
+            <div class="right">
+                <il class="nav-elements"><a class="nav-elements" href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a></il>
+                <il class="nav-elements"><a class="nav-elements" href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></il>
+                <il id="menu" class="nav-elements"><a class="nav-elements" href="https://www.google.com/intl/en/about/products?tab=wh"><img src="google-app-menu.jpg" height="19" width="auto" alt="google app menu"></a></il>
+                <il class="nav-elements"><a class="nav-elements" href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/"><img  id="pfp" src="https://lh3.googleusercontent.com/ogw/ADGmqu8mBYuTvelhAnW5HuwU1hDx6HYP9MFDbnfAow45=s32-c-mo" alt="profile picture"></a></il>
+            </div>
         </ul>
         <div>
             <img  id="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
         </div>
         <form>
-            <input id="searchbar" type="text">
+            <div id="searchbar">
+                <img id="search-icon" src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png">
+                <input id="searchbar-text" type="text">
+            </div>
             <div class="buttons">
                 <button id="search" type="submit">Google Search</button>
                 <button id="feeling-lucky" type="submit">I'm Feeling Lucky</button>
             </div>
         </form>
         <footer class="bottom" id="footer">
-            <ul>
-                <il class="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQkdQCCBU&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_us%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw3XLzhicA5ZZW0afDbW0l2T">Advertising</a></il>
-                <il class="left"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQktQCCBY&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">Business</a></il>
-                <il class="left"><a href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a></il>
-                <il class="right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQzq0CCBM&url=https%3A%2F%2Fwww.google.com%2Fpreferences%3Fhl%3Den&usg=AOvVaw0XvhSqpc_GFt9aG_mRLp1F">Settings</a></il>
-                <il class="right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQ8qwCCBI&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Den%26fg%3D1&usg=AOvVaw2d8Ahs2oc0jxVOgPfpr4Fe">Terms</a></il>
-                <il class="right"><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQ8awCCBE&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Den%26fg%3D1&usg=AOvVaw25lN6TjyY2uszSImdhMejE">Privacy</a></il>
+            <ul id=footer-left>
+                <il class="footer-element"><a class="link" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQkdQCCBU&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_us%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw3XLzhicA5ZZW0afDbW0l2T">Advertising</a></il>
+                <il class="footer-element"><a class="link" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQktQCCBY&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">Business</a></il>
+                <il class="footer-element"><a class="link" href="https://google.com/search/howsearchworks/?fg=1">How Search Works</a></il>
+            </ul>
+            <ul id="footer-right">
+                <il class="footer-element"><a class="link" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQ8awCCBE&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Fhl%3Den%26fg%3D1&usg=AOvVaw25lN6TjyY2uszSImdhMejE">Privacy</a></il>
+                <il class="footer-element"><a class="link" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQ8qwCCBI&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Fhl%3Den%26fg%3D1&usg=AOvVaw2d8Ahs2oc0jxVOgPfpr4Fe">Terms</a></il>
+                <il class="footer-element"><a class="link" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjwg6Oor4nrAhVQRa0KHW2hAiEQzq0CCBM&url=https%3A%2F%2Fwww.google.com%2Fpreferences%3Fhl%3Den&usg=AOvVaw0XvhSqpc_GFt9aG_mRLp1F">Settings</a></il>
             </ul>
         </footer>
     </body>
